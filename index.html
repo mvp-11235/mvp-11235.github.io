@@ -11,25 +11,9 @@
     <link rel="stylesheet" href="./settings/css/main.css">
     <link rel="stylesheet" href="./settings/css/default.css">
     <script src="./settings/js/dateCount.js"></script>
-    <title>mvp-11235's Portfolio</title>
-    <style>
-        .background{
-            position: absolute;
-            top: 0px;
-            left: 5px;
-            width: 80vw;
-            height: 10vh;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-            filter: blur(3px);
-        }
-    </style>
+    <title>MVP-11235</title>
 </head>
 <body>
-    <div class="background">
-        <img src="./settings/image/background/background3.jpg" alt="background">
-    </div>
     <!--Title box-->
     <div class="card" style="text-align: center;">
         <div class="me" style="margin-left: 60px;">
@@ -40,15 +24,27 @@
         </div>
         <p class="title" style="color: rgb(66, 113, 255);">
             mvp-11235
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
         </p>
         <p style="color: whitesmoke;">mvp-11235.github.io</p>
-        <p class="myold" style="color: whitesmoke;">
-            태어난지
-            <span id="datecount">392774400</span>
-             초 지남
+        <p style="color: whitesmoke;">
+            현재시각: 
+            <span id="minutes">0</span>분
+            <span id="seconds">0</span>초
+        </p>
+             <script>
+                const date = new Date();
+                let second = date.getSeconds();
+                let minute = date.getMinutes();
+
+                document.getElementById('minutes').innerHTML = minute;
+                document.getElementById('seconds').innerHTML = second + 3;
+
+                setInterval(() => {
+                    document.getElementById('minutes').innerHTML = minute++;
+                }, 60000);
+            
+
+            </script>
         </p>
     </div>
     <!--Title box-->
