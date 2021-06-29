@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Raleway:wght@200&display=swap');
+
+* {
+    font-family: 'Jua', sans-serif;
+    font-size: 20px;
+}
+
+:active {
+    cursor: url('./settings/cursor/cursorClick.cur');
+}
+
+.title{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 40px;
+}

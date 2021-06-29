@@ -1,0 +1,43 @@
+.card {
+    text-align: center;
+    position: absolute;
+    margin-top: 200px;
+    left: 40%;
+    top: 5%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+}
+
+.me {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    transition: all 0.5s;
+    border-radius: 50%;
+    background-color: rgb(102, 102, 255);
+    box-shadow: 0 0 7px 7px rgb(102, 102, 255);
+}
+
+.normal{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.normal:hover{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
