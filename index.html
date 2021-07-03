@@ -27,23 +27,32 @@
         </p>
         <p style="color: whitesmoke;">mvp-11235.github.io</p>
         <p style="color: whitesmoke;">
-            현재시각: 
-            <span id="minutes">0</span>분
-            <span id="seconds">0</span>초
+            <span id="clock">clock</span>
         </p>
-             <script>
-                const date = new Date();
-                let second = date.getSeconds();
-                let minute = date.getMinutes();
+             <script>               
+                var clockTarget = document.getElementById("clock");
 
-                document.getElementById('minutes').innerHTML = minute;
-                document.getElementById('seconds').innerHTML = second + 3;
+                function clock() {
+                    var date = new Date();
 
-                setInterval(() => {
-                    document.getElementById('minutes').innerHTML = minute++;
-                }, 60000);
-            
+                    // date Object를 받기 
+                    var month = date.getMonth();
+                    var clockDate = date.getDate();
+                    var day = date.getDay();
+                    var week = ['일', '월', '화', '수', '목', '금', '토']; 
+                    var hours = date.getHours();
+                    var minutes = date.getMinutes();
+                    var seconds = date.getSeconds();
+                    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일  ` + `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+                }
 
+                function init() {
+                    clock();
+
+                    setInterval(clock, 1000);
+                }
+
+                init();
             </script>
         </p>
     </div>
