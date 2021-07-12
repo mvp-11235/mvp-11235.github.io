@@ -1,5 +1,6 @@
 var clockTarget = document.getElementById("clock");
 
+// 현재 시각
 function clock() {
     var date = new Date();
 
