@@ -7,3 +7,5 @@ This is my [github page](https://mvp-11235.github.io/).
 - Links
   - Github Page: The circular image & 'mvp-11235' at the top
   - Introduction: 'mvp-11235' in the title box.
+- Drag
+  - Color: green
